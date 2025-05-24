@@ -48,20 +48,17 @@ const ProjectCard = styled(motion.div)`
   }
 `
 
-interface ProjectImageProps {
-  imageUrl: string;
-}
-const ProjectImage = styled.div<ProjectImageProps>`
+const ProjectImage = styled.div`
   width: 100%;
   height: 200px;
-  background: #2a2a2a url(${props => props.imageUrl}) center/cover no-repeat;
+  background: #2a2a2a;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: #4ecdc4;
+  font-size: 2.5rem;
   position: relative;
   overflow: hidden;
-
   &::after {
     content: '';
     position: absolute;
@@ -131,7 +128,7 @@ const Projects = () => {
       title: 'EduCity',
       description: `EduCity is a gamified learning platform that transforms education into an interactive adventure. Subjects become immersive cities, students explore and interact with 3D environments, and features include final boss assessments, leaderboards, AR models, chatbot integration, and document translation for global accessibility.`,
       tags: ['Unity', 'Flutter', 'Dart', 'C#', 'Java', 'Python', 'Gamification', 'AR'],
-      imageUrl: '/projects/educity.png',
+      // imageUrl: '/projects/educity.png',
       githubUrl: 'https://github.com/vxtxsh/EduCity',
       demoUrl: ''
     },
@@ -139,7 +136,7 @@ const Projects = () => {
       title: 'Bonfire',
       description: `Bonfire is a Flutter-based mental health app that fosters an inclusive, therapy-driven community. Features include group therapy, VR rage/meditation rooms, mood prediction using HRV, a personal diary, and an emotionally trained LLM chatbot for support. Won 3rd Place at BharathVersity's BITS Goa Hackathon.`,
       tags: ['Flutter', 'Firebase', 'Unity', 'Python', 'Arduino', 'Mental Health', 'VR', 'AI'],
-      imageUrl: '/projects/bonfire-app-screenshot.png',
+      // imageUrl: '/projects/bonfire-app-screenshot.png',
       githubUrl: 'https://github.com/vxtxsh/Bonfire',
       demoUrl: ''
     },
@@ -147,7 +144,7 @@ const Projects = () => {
       title: 'BlockoGram',
       description: 'A decentralized social media platform leveraging Ethereum blockchain and IPFS for secure, censorship-resistant content sharing. Implements end-to-end encryption and smart contracts for content monetization.',
       tags: ['Dart', 'Flutter', 'Ethereum', 'IPFS', 'Solidity'],
-      imageUrl: '/projects/blockogram.png',
+      // imageUrl: '/projects/blockogram.png',
       githubUrl: 'https://github.com/venkat-vamsi/Blockogramm',
       demoUrl: ''
     },
@@ -155,7 +152,7 @@ const Projects = () => {
       title: 'Good Doctor',
       description: 'An innovative application designed to support autistic children through technology. Features include interactive learning modules, progress tracking, and parent-teacher communication tools.',
       tags: ['Dart', 'Flutter', 'Firebase', 'Healthcare', 'Accessibility'],
-      imageUrl: '/projects/gooddoctor.png',
+      // imageUrl: '/projects/gooddoctor.png',
       githubUrl: 'https://github.com/venkat-vamsi/Good-Doctor',
       demoUrl: ''
     },
@@ -163,7 +160,7 @@ const Projects = () => {
       title: 'Student Tracker App',
       description: 'An IoT-powered student tracking system using RFID technology. Provides real-time location tracking, attendance automation, and analytics for educational institutions.',
       tags: ['Dart', 'Flutter', 'IoT', 'RFID', 'Firebase'],
-      imageUrl: '/projects/studenttracker.png',
+      // imageUrl: '/projects/studenttracker.png',
       githubUrl: 'https://github.com/venkat-vamsi/Student-Tracker-App',
       demoUrl: ''
     },
@@ -171,7 +168,7 @@ const Projects = () => {
       title: 'GRIET-EVENTS',
       description: 'A comprehensive event management platform for GRIET college. Enables faculty to create, manage, and track events, with features for student registration and participation.',
       tags: ['Java', 'Android', 'Firebase', 'Event Management'],
-      imageUrl: '/projects/grietevents.png',
+      // imageUrl: '/projects/grietevents.png',
       githubUrl: 'https://github.com/venkat-vamsi/GRIET-EVENTS',
       demoUrl: ''
     }
@@ -197,7 +194,9 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <ProjectImage imageUrl={project.imageUrl} />
+              <ProjectImage>
+                🚀
+              </ProjectImage>
               <ProjectInfo>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectDescription>{project.description}</ProjectDescription>
