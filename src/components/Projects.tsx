@@ -48,10 +48,13 @@ const ProjectCard = styled(motion.div)`
   }
 `
 
-const ProjectImage = styled.div`
+interface ProjectImageProps {
+  imageUrl: string;
+}
+const ProjectImage = styled.div<ProjectImageProps>`
   width: 100%;
   height: 200px;
-  background: #2a2a2a;
+  background: #2a2a2a url(${props => props.imageUrl}) center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

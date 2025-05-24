@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { OrbitControls, Sphere, Stars } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Suspense, useRef } from 'react'
-import { Mesh } from 'three'
+import { Points } from 'three'
 import About from './components/About'
 import Contact from './components/Contact'
 import Hero from './components/Hero'
@@ -31,7 +31,7 @@ const ContentContainer = styled.div`
 `
 
 function SpaceBackground() {
-  const starsRef = useRef<Mesh>(null)
+  const starsRef = useRef<Points>(null)
 
   useFrame(() => {
     if (starsRef.current) {

@@ -60,53 +60,6 @@ const Description = styled(motion.p)`
   text-shadow: 0 0 6px #222, 0 0 2px #4ecdc4;
 `
 
-const SkillsList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: #b2f7ef;
-  font-size: 1.05rem;
-  text-align: left;
-  li { margin-bottom: 0.5rem; }
-`
-
-const BadgesOrbit = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0 2.5rem 0;
-  flex-wrap: wrap;
-`
-
-const SpaceBadge = styled(motion.div)`
-  background: rgba(44, 62, 80, 0.85);
-  border: 1.5px solid #4ecdc4;
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 24px 0 #222b;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.98rem;
-  position: relative;
-  transition: transform 0.3s;
-  will-change: transform;
-  &:hover {
-    transform: scale(1.07) rotate(-3deg);
-    border-color: #ff6b6b;
-  }
-  svg {
-    font-size: 2.1rem;
-    margin-bottom: 0.5rem;
-    color: #ffeb3b;
-    filter: drop-shadow(0 0 6px #4ecdc4);
-  }
-`
-
 const AwardsList = styled.ul`
   list-style: none;
   padding: 0;
@@ -139,34 +92,6 @@ const CertCard = styled(AboutCard)`
     font-size: 0.92rem;
     margin-top: 0.3rem;
     text-decoration: underline;
-  }
-`
-
-const SkillsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1.1rem;
-  margin-top: 1.2rem;
-  margin-bottom: 2.2rem;
-`
-
-const SkillPill = styled(motion.div)`
-  background: rgba(255,255,255,0.10);
-  border-radius: 16px;
-  padding: 0.7rem 1.1rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  border: 1px solid rgba(78,205,196,0.18);
-  box-shadow: 0 2px 10px 0 #222b3a33;
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, border-color 0.2s;
-  &:hover {
-    transform: translateY(-4px) scale(1.04);
-    border-color: #4ecdc4;
   }
 `
 
@@ -203,15 +128,6 @@ const HackathonBadge = styled(AboutCard)`
 `
 
 const About = () => {
-  const skills = [
-    'SQL', 'Dart', 'HTML', 'Java', 'C',
-    'HTML', 'CSS', 'JavaScript',
-    'Flutter', 'Android Studio',
-    'Unity', 'Git',
-    'NumPy', 'Pandas', 'Keras', 'Tensorflow', 'Matplotlib',
-    'Firebase', 'PostgreSQL',
-  ];
-
   const hackathonWins = [
     { title: 'IIT-H Hackathon', desc: '1st Place, IIT Hyderabad', icon: <FaTrophy /> },
     { title: 'TechXcelerate', desc: '3rd Place, BITS Goa', icon: <FaTrophy /> },
